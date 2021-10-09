@@ -53,7 +53,7 @@ void printMap(std::array<std::array<uint8_t, width>, height> arg) {
 	{
 		for (int j = 0; j < width; j++)
 		{
-			if (arg[i][j] >= 0 && arg[i][j] < ' ') {
+			if (!std::isprint(arg[i][j])) {
 				std::cout << ' ';
 			}
 			else {
@@ -75,3 +75,4 @@ void printMapIntMatrix(std::array<std::array<uint8_t, width>, height> arg) {
 		std::cout << '\n';
 	}
 };
+
